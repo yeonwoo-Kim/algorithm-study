@@ -7,5 +7,10 @@ public class Main {
             sort.selectSort();
          */
 
+        /*
+            버블 정렬 (BubbleSort)
+         */
+        AlgorithmCode.BubbleSort sort = new BubbleSort();
+        sort.bubbleSort();
     }
 }
