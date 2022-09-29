@@ -1,3 +1,4 @@
+package AlgorithmCode;
 public class SelectSort {
     public void selectSort() {
         /*
@@ -15,7 +16,7 @@ public class SelectSort {
         처리할 데이터의 개수가 많다면 매우 많은 연산을 처리해야 한다.
         ∴ 다른 정렬 알고리즘과 비교했을 때 비효율적
          */
-        int arr[] = {1, 10, 5, 7, 6, 8, 4, 3, 2, 9};
+        int[] arr = {1, 10, 5, 7, 6, 8, 4, 3, 2, 9};
         int min, temp;
         int index = 0;
 
