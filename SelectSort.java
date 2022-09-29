@@ -1,5 +1,3 @@
-package algorithmCode;
-
 public class SelectSort {
     public void selectSort() {
         /*
