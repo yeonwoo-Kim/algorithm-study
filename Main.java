@@ -9,8 +9,15 @@ public class Main {
 
         /*
             버블 정렬 (BubbleSort)
+            AlgorithmCode.BubbleSort sort = new BubbleSort();
+            sort.bubbleSort();
          */
-        AlgorithmCode.BubbleSort sort = new BubbleSort();
-        sort.bubbleSort();
+
+        /*
+            삽입 정렬 (InsertSort)
+
+         */
+        AlgorithmCode.InsertSort sort = new InsertSort();
+        sort.insertSort();
     }
 }
