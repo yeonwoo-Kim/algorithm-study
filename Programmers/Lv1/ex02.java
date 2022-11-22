@@ -28,35 +28,35 @@ public class ex02 {
      */
     static int solution(int k, int m, int[] score) {
         int answer = 0;
-        int box = 0;    // 한 사과박스 당 가격
-        List<Integer> list = new LinkedList<>();    // 사과 리스트
-        ArrayList<Integer> arr = new ArrayList<>(); // 한 사과박스
+        int boxAmount = 0;    // 한 사과박스 당 가격
+        List<Integer> appleList = new LinkedList<>();    // 사과 리스트
+        ArrayList<Integer> box = new ArrayList<>(); // 한 사과박스
 
         for (int s : score) {
-            list.add(s);
+            appleList.add(s);
         }
 
-        Collections.sort(list, Collections.reverseOrder()); // 사과를 최상품 순으로 정렬
+        Collections.sort(appleList, Collections.reverseOrder()); // 사과를 최상품 순으로 정렬
 
         // 상자에 담을 사과의 개수가 충족할 경우에만 계산
-        while (list.size() >= m) {
+        while (appleList.size() >= m) {
             for (int i = 0; i < m; i++) {
                 // 박스에 담을 사과를 m개까지 담는다.
-                arr.add(list.get(i));
+                box.add(appleList.get(i));
             }
             //사과박스가 찼을 경우, 사과 상자의 가격을 계산한다.
-            if (arr.size() == m) {
+            if (box.size() == m) {
                 // 내림차순으로 정렬된 리스트에서 순차적으로 넣었기 때문에, 맨 마지막 인덱스의 점수로 가격 계산
-                box = arr.get(arr.size() - 1) * m;
-                answer += box;
+                boxAmount = box.get(box.size() - 1) * m;
+                answer += boxAmount;
 
                 // 박스에 담긴 사과 개수만큼 사과 리스트에서 제거
                 for (int j = 0; j < m; j++) {
-                    list.remove(0);
+                    appleList.remove(0);
                 }
             }
             // 사과를 다시 담기 위해 clear
-            arr.clear();
+            box.clear();
         }
         return answer;
     }
