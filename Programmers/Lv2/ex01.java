@@ -1,6 +1,6 @@
 package Programmers.Lv2;
 
-public class ex24 {
+public class ex01 {
     /**
      * [타겟 넘버]
      * 출처 - https://school.programmers.co.kr/learn/courses/30/lessons/43165
